@@ -1,0 +1,72 @@
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.csproj.AssemblyReference.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.AssemblyInfoInputs.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.AssemblyInfo.cs
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.csproj.CoreCompileInputs.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\appsettings.Development.json
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\appsettings.json
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.staticwebassets.endpoints.json
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.exe
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.deps.json
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.runtimeconfig.json
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.dll
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\SmartChatbot.Api.pdb
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\vedant\smart chatbot\smart chatbot\backend\bin\Debug\net10.0\System.IO.Packaging.dll
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\scopedcss\bundle\SmartChatbot.Api.styles.css
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\staticwebassets.build.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\staticwebassets.development.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\swae.build.ex.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartCha.2AF6F580.Up2Date
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.dll
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\refint\SmartChatbot.Api.dll
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.pdb
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\SmartChatbot.Api.genruntimeconfig.cache
+D:\vedant\smart chatbot\smart chatbot\backend\obj\Debug\net10.0\ref\SmartChatbot.Api.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\appsettings.Development.json
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\appsettings.json
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.staticwebassets.endpoints.json
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.exe
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.deps.json
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.runtimeconfig.json
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\SmartChatbot.Api.pdb
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\vedant\new_smart chatbot_final\backend\bin\Debug\net10.0\System.IO.Packaging.dll
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.csproj.AssemblyReference.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.AssemblyInfoInputs.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.AssemblyInfo.cs
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.csproj.CoreCompileInputs.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\scopedcss\bundle\SmartChatbot.Api.styles.css
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\staticwebassets.build.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\staticwebassets.development.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\swae.build.ex.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartCha.2AF6F580.Up2Date
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.dll
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\refint\SmartChatbot.Api.dll
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.pdb
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\SmartChatbot.Api.genruntimeconfig.cache
+D:\vedant\new_smart chatbot_final\backend\obj\Debug\net10.0\ref\SmartChatbot.Api.dll

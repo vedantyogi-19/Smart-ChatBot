@@ -1,0 +1,2 @@
+# Python dependencies for Voice-to-Voice Text-to-Speech (TTS) engine
+edge-tts>=6.1.9

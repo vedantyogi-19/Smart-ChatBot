@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ezy2IfMq0s7bJ8+4e1LtF3abpqqfyfeGRAxrayOhFMs=",
+  "Source": "SmartChatbot.Api",
+  "BasePath": "_content/SmartChatbot.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

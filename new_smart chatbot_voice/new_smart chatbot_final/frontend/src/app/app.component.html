@@ -1,0 +1,305 @@
+<div class="app-container" [class.sidebar-hidden]="!sidebarOpen">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Sidebar Header / Branding -->
+    <div class="sidebar-header">
+      <div class="gov-brand">
+        <div class="sidebar-logo-container">
+          <img src="assets/smart.png" alt="SMART MIS Logo" class="gov-emblem" />
+        </div>
+        <div class="gov-brand-text">
+          <div class="gov-title">{{ t.title }}</div>
+          <div class="gov-dept">{{ t.govtDept }}</div>
+        </div>
+      </div>
+      <button (click)="toggleSidebar()" class="sidebar-close-btn" title="Close panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-tagline">
+      {{ t.tagline }}
+    </div>
+
+    <!-- Module Section -->
+    <div class="module-section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      {{ t.selectModule }}
+    </div>
+
+    <div class="module-list">
+      <div *ngFor="let mod of modules"
+           class="module-card"
+           [class.active]="activeModule?.name === mod.name"
+           (click)="selectModule(mod)">
+        <div class="module-card-icon">{{ mod.icon }}</div>
+        <div class="module-card-text">
+          <div class="module-card-name">{{ mod.name }}</div>
+          <div class="module-card-desc">{{ mod.description }}</div>
+        </div>
+        <div class="module-badge" [class.badge-loaded]="mod.isLoaded" [class.badge-missing]="!mod.isLoaded">
+          <span class="badge-dot"></span>
+          {{ mod.isLoaded ? t.ready : t.missing }}
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-text">Government of Maharashtra</div>
+      <div class="sidebar-footer-sub">{{ t.smartMission }}</div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- Government Top Header Bar -->
+    <header class="gov-topbar">
+      <!-- Sidebar Toggle Button -->
+      <button (click)="toggleSidebar()" class="sidebar-toggle-btn" title="Toggle User Manuals Sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
+        <span class="toggle-btn-label">{{ t.selectModule }}</span>
+      </button>
+
+      <div class="topbar-center">
+        <span class="topbar-module-label" *ngIf="activeModule">
+          {{ activeModule.icon }} {{ activeModule.name }}
+        </span>
+        <span class="topbar-module-label" *ngIf="!activeModule">
+          <span class="topbar-logo-pill"><img src="assets/smart.png" alt="SMART" class="topbar-logo" /></span>
+          {{ t.welcomeTitle }}
+        </span>
+      </div>
+
+      <div class="topbar-right">
+        <!-- Language Selector Pill -->
+        <div class="lang-selector-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <button class="lang-opt" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-opt" [class.active]="currentLang === 'mr'" (click)="setLanguage('mr')">मराठी</button>
+        </div>
+
+        <div class="topbar-status" *ngIf="activeModule" [class.warning]="!activeModule.isLoaded">
+          <span class="status-dot"></span>
+          <span>{{ activeModule.isLoaded ? t.systemReady : t.docMissing }}</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Panel -->
+    <div class="content-panel">
+
+      <!-- Welcome Screen -->
+      <div *ngIf="!activeModule" class="welcome-screen">
+        <div class="welcome-gov-badge">
+          <div class="welcome-logo-card">
+            <img src="assets/smart.png" alt="SMART MIS" class="welcome-emblem" />
+          </div>
+          <div class="welcome-gov-label">Government of Maharashtra</div>
+          <div class="welcome-gov-sub">{{ t.govtDept }}</div>
+        </div>
+        <h1 class="welcome-title">{{ t.welcomeTitle }}</h1>
+        <p class="welcome-sub">
+          {{ t.welcomeSub }}
+        </p>
+
+        <div class="module-grid-welcome">
+          <div *ngFor="let mod of modules" class="module-tile" (click)="selectModule(mod)">
+            <div class="module-tile-header">
+              <span class="module-tile-icon">{{ mod.icon }}</span>
+              <div class="module-tile-badge-sm" [class.loaded]="mod.isLoaded">
+                {{ mod.isLoaded ? '● ' + t.ready : '○ ' + t.missing }}
+              </div>
+            </div>
+            <div class="module-tile-name">{{ mod.name }}</div>
+            <div class="module-tile-desc">{{ mod.description }}</div>
+            <div class="module-tile-action">
+              {{ t.openModule }}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Container -->
+      <div *ngIf="activeModule" class="chat-container">
+
+        <!-- Chat Module Banner -->
+        <div class="chat-module-banner">
+          <div class="chat-module-info">
+            <div class="chat-logo-pill">
+              <img src="assets/smart.png" alt="SMART" class="chat-module-logo" />
+            </div>
+            <span class="chat-module-icon">{{ activeModule.icon }}</span>
+            <div>
+              <div class="chat-module-name">{{ activeModule.name }}</div>
+              <div class="chat-module-desc">{{ activeModule.description }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="messages-scroll">
+          <!-- Empty state -->
+          <div *ngIf="chatHistories[activeModule.name]?.length === 0" class="chat-empty-state">
+            <div class="chat-empty-icon">💬</div>
+            <div class="chat-empty-title">{{ t.readyToAssist }}</div>
+            <div class="chat-empty-sub">{{ t.askAnything }}</div>
+          </div>
+
+          <!-- Message bubbles -->
+          <div *ngFor="let msg of chatHistories[activeModule.name]; let idx = index"
+               class="msg-row"
+               [class.user]="msg.role === 'user'"
+               [class.bot]="msg.role === 'assistant'">
+
+            <div class="msg-avatar" [class.user-av]="msg.role === 'user'" [class.bot-av]="msg.role === 'assistant'">
+              <span *ngIf="msg.role === 'user'">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span *ngIf="msg.role === 'assistant'" class="bot-av-text">🌾</span>
+            </div>
+
+            <div class="msg-content-wrapper">
+              <div class="msg-sender-name">
+                {{ msg.role === 'user' ? 'You' : t.assistantSender }}
+              </div>
+
+              <!-- Editing View -->
+              <div *ngIf="editingIndex === idx; else standardView" class="msg-edit-container">
+                <textarea [(ngModel)]="editDraft" class="msg-edit-textarea" rows="2"></textarea>
+                <div class="msg-edit-actions">
+                  <button (click)="saveEdit(idx)" class="btn-save">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+                    {{ t.saveEdit }}
+                  </button>
+                  <button (click)="cancelEdit()" class="btn-cancel">{{ t.cancelEdit }}</button>
+                </div>
+              </div>
+
+              <!-- Standard Message -->
+              <ng-template #standardView>
+                <div class="msg-bubble"
+                     [class.user]="msg.role === 'user'"
+                     [class.bot]="msg.role === 'assistant'"
+                     [innerHTML]="formatMessageContent(msg.content)">
+                </div>
+
+                <!-- Hover Actions -->
+                <div class="msg-actions">
+                  <button (click)="copyMessage(idx, msg.content)" class="action-btn" [title]="copiedStatus[idx] ? t.copied : t.copy">
+                    <span *ngIf="!copiedStatus[idx]">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    </span>
+                    <span *ngIf="copiedStatus[idx]">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    {{ copiedStatus[idx] ? t.copied : t.copy }}
+                  </button>
+
+                  <button *ngIf="msg.role === 'user'" (click)="startEdit(idx, msg.content)" class="action-btn" [title]="t.edit">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                    {{ t.edit }}
+                  </button>
+
+                  <button (click)="deleteMessage(idx)" class="action-btn delete-btn" [title]="t.deleteMsg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                    {{ t.deleteMsg }}
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+
+          <!-- Typing Indicator -->
+          <div *ngIf="isLoading" class="msg-row bot">
+            <div class="msg-avatar bot-av"><span class="bot-av-text">🌾</span></div>
+            <div class="msg-content-wrapper">
+              <div class="msg-sender-name">{{ t.assistantSender }}</div>
+              <div class="typing-bubble">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <span class="typing-label">{{ t.processing }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error Notice -->
+          <div *ngIf="errorMessage" class="notice error">
+            <span class="notice-icon">⚠</span>
+            <div class="notice-text">{{ errorMessage }}</div>
+          </div>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="input-bar">
+          <!-- Suggestion chips -->
+          <div class="suggestion-row" *ngIf="activeModule.suggestions && activeModule.suggestions.length > 0">
+            <span class="suggestion-label">{{ t.quickQueries }}</span>
+            <button *ngFor="let sug of activeModule.suggestions"
+                    class="suggestion-chip"
+                    (click)="useSuggestion(sug)"
+                    [disabled]="isLoading">
+              {{ sug }}
+            </button>
+          </div>
+
+          <!-- Main Input Row -->
+          <div class="input-main-row">
+
+            <!-- Voice Button — always visible, prominent -->
+            <button class="voice-btn-primary"
+                    [class.listening]="isListening"
+                    [class.voice-on]="isVoiceMode"
+                    (click)="handleVoiceButton()"
+                    [disabled]="isLoading || !activeModule.isLoaded"
+                    [title]="isVoiceMode ? (isListening ? t.listening : t.speak) : t.voice">
+              <div class="voice-btn-icon">
+                <svg *ngIf="!isListening" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                <svg *ngIf="isListening" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+              </div>
+              <div class="voice-btn-label">
+                <span *ngIf="isListening">{{ t.listening }}</span>
+                <span *ngIf="!isListening && isVoiceMode">{{ t.speak }}</span>
+                <span *ngIf="!isListening && !isVoiceMode">{{ t.voice }}</span>
+              </div>
+            </button>
+
+            <!-- Text Input Wrapper -->
+            <div class="chat-input-wrapper">
+              <textarea
+                [(ngModel)]="userMessage"
+                (keydown.enter)="onKeydownEnter($event)"
+                (input)="adjustTextareaHeight($event)"
+                [placeholder]="isListening ? t.listeningPlaceholder : t.placeholder"
+                class="chat-input-textarea"
+                [disabled]="isLoading || !activeModule.isLoaded"
+                rows="1">
+              </textarea>
+
+              <!-- Send Button -->
+              <button class="send-button"
+                      (click)="sendChatMessage()"
+                      [disabled]="isLoading || !userMessage.trim() || !activeModule.isLoaded"
+                      title="Send message (Enter)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="input-disclaimer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            {{ t.disclaimer }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
